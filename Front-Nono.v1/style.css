@@ -1,0 +1,88 @@
+/* =====================
+   Style général
+===================== */
+body {
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+/* Titre */
+h1 {
+  margin-bottom: 20px;
+}
+
+/* Conteneur principal */
+#game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+
+  /* Indices colonnes*/
+
+#clues-col {
+  display: grid;
+  grid-auto-flow: column;  /* les div enfants s'empilent verticalement par colonne */
+  gap: 2px;
+  margin-left: 30px;       /* espace à gauche pour indices lignes */
+}
+
+#clues-col > div {
+  display: flex;
+  flex-direction: column; /* chaque chiffre dans sa propre ligne */
+  justify-content: flex-end;
+  align-items: center;
+  min-height: 30px;
+}
+
+/* Chaque chiffre dans une colonne */
+#clues-col div div {
+  line-height: 30px;
+}
+
+/* =====================
+   Ligne indices
+===================== */
+#clues-row {
+  display: grid;
+  grid-auto-rows: 30px; /* chaque ligne a 30px de hauteur */
+  margin-right: 5px;    /* espace à droite pour séparer la grille */
+  text-align: right;
+}
+
+/* =====================
+   Grille
+===================== */
+#grid {
+  display: grid;
+  gap: 2px; /* espace entre les cases */
+}
+
+/* Case */
+.cell {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #999;
+  cursor: pointer;
+  text-align: center;
+  line-height: 30px;
+}
+
+/* Case remplie */
+.cell.filled {
+  background-color: black;
+}
+
+/* Case vide */
+.cell.empty {
+  background-color: rgb(255, 255, 255);
+}
+
+/* Case inconnue */
+.cell.unknown {
+  background-color: #811212;
+}

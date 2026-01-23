@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nonogram adaptatif</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Les Foudroyeurs de Mème</h1>
+
+<div id="game-container">
+
+  <!-- Indices colonnes -->
+  <div id="clues-col"></div> <!--correspond à colContainer dans CluesView -->
+
+  <div style="display:flex;"> <!--fait que clues-row et grid sont côte à côte-->
+    <!-- Indices lignes -->
+    <div id="clues-row"></div> <!--correspond à rowContainer dans CluesView -->
+
+    <!-- Grille -->
+    <div id="grid"></div> <!--correspond à la grille, qui sera utilisée par GridView-->
+  </div>
+
+</div>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
